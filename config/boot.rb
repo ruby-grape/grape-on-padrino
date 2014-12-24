@@ -1,9 +1,9 @@
-PADRINO_ENV  = ENV['PADRINO_ENV'] ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(PADRINO_ENV)
+RACK_ENV  = ENV['RACK_ENV'] ||= ENV['RACK_ENV'] ||= 'development'  unless defined?(RACK_ENV)
 PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
 
 require 'rubygems' unless defined?(Gem)
 require 'bundler/setup'
-Bundler.require(:default, PADRINO_ENV)
+Bundler.require(:default, RACK_ENV)
 
 [ 'config/initializers' ].each do |path|
   Dir[File.expand_path("../../#{path}/**/*.rb", __FILE__)].each do |f|

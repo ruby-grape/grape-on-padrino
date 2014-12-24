@@ -9,8 +9,8 @@ describe Acme::Api::Ping do
 
   it "ping" do
     get "/ping"
-    last_response.status.should == 200
-    last_response.body.should == { ping: "pong" }.to_json
+    expect(last_response.status).to eq(200)
+    expect(last_response.body).to eq({ ping: "pong" }.to_json)
   end
 end
 

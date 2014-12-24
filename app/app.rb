@@ -1,7 +1,6 @@
 module Acme
   class App < Grape::API
     class << self
-
       def cascade
         []
       end
@@ -15,7 +14,7 @@ module Acme
       end
 
       def load_paths
-        @_load_paths ||= [ File.expand_path('../../api', __FILE__) ]
+        @_load_paths ||= [File.expand_path('../../api', __FILE__)]
       end
 
       ## NOTE: Taken from Padrino. Deprecated in master (0.13.0.rc1).
@@ -33,7 +32,7 @@ module Acme
 
       def setup_application!
         @_configured ||= begin
-          self.set_load_paths(*load_paths)
+          set_load_paths(*load_paths)
           Padrino.require_dependencies(dependencies, force: true)
           Grape::API.logger = Padrino.logger
           true
@@ -41,11 +40,11 @@ module Acme
       end
 
       def app_file
-        ""
+        ''
       end
 
       def public_folder
-        ""
+        ''
       end
     end
 
@@ -54,4 +53,3 @@ module Acme
     mount Acme::Api::Ping
   end
 end
-

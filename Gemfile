@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'grape', github: 'intridea/grape'
+gem 'grape', github: 'intridea/grape', tag: 'v0.10.0'
 gem 'padrino', github: 'padrino/padrino-framework'
 
 group :development, :test do

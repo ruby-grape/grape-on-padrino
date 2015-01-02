@@ -1,7 +1,9 @@
 Grape API on Padrino
 ====================
 
-[![Build Status](https://secure.travis-ci.org/dblock/grape-on-padrino.png)](http://travis-ci.org/dblock/grape-on-padrino)
+[![Build Status](http://img.shields.io/travis/dblock/grape-on-padrino.svg)](https://travis-ci.org/dblock/grape-on-padrino)
+[![Dependency Status](https://gemnasium.com/dblock/grape-on-padrino.svg)](https://gemnasium.com/dblock/grape-on-padrino)
+[![Code Climate](https://codeclimate.com/github/dblock/grape-on-padrino.svg)](https://codeclimate.com/github/dblock/grape-on-padrino)
 
 A [Grape](http://github.com/intridea/grape) API mounted on the [Padrino Web Framework](http://www.padrinorb.com).
 

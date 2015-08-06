@@ -1,13 +1,18 @@
 Grape API on Padrino
 ====================
 
-[![Build Status](http://img.shields.io/travis/dblock/grape-on-padrino.svg)](https://travis-ci.org/dblock/grape-on-padrino)
-[![Dependency Status](https://gemnasium.com/dblock/grape-on-padrino.svg)](https://gemnasium.com/dblock/grape-on-padrino)
-[![Code Climate](https://codeclimate.com/github/dblock/grape-on-padrino.svg)](https://codeclimate.com/github/dblock/grape-on-padrino)
+[![Build Status](http://img.shields.io/travis/ruby-grape/grape-on-padrino.svg)](https://travis-ci.org/ruby-grape/grape-on-padrino)
+[![Dependency Status](https://gemnasium.com/ruby-grape/grape-on-padrino.svg)](https://gemnasium.com/ruby-grape/grape-on-padrino)
+[![Code Climate](https://codeclimate.com/github/ruby-grape/grape-on-padrino.svg)](https://codeclimate.com/github/ruby-grape/grape-on-padrino)
 
-A [Grape](http://github.com/intridea/grape) API mounted on the [Padrino Web Framework](http://www.padrinorb.com).
+A [Grape](http://github.com/ruby-grape/grape) API mounted on the [Padrino Web Framework](http://www.padrinorb.com).
 
 * [ping](api/ping.rb): a hello world example that returns a JSON document
+
+Heroku
+------
+
+In instance of grape-on-padrino is deployed on Heroku at [grape-on-padrino.herokuapp.com](http://grape-on-padrino.herokuapp.com/ping).
 
 Run
 ---

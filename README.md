@@ -1,7 +1,7 @@
 Grape API on Padrino
 ====================
 
-[![Build Status](http://img.shields.io/travis/ruby-grape/grape-on-padrino.svg)](https://travis-ci.org/ruby-grape/grape-on-padrino)
+[![Build Status](https://travis-ci.org/ruby-grape/grape-on-padrino.svg?branch=master)](https://travis-ci.org/ruby-grape/grape-on-padrino)
 [![Dependency Status](https://gemnasium.com/ruby-grape/grape-on-padrino.svg)](https://gemnasium.com/ruby-grape/grape-on-padrino)
 [![Code Climate](https://codeclimate.com/github/ruby-grape/grape-on-padrino.svg)](https://codeclimate.com/github/ruby-grape/grape-on-padrino)
 

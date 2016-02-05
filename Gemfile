@@ -1,15 +1,17 @@
 source 'https://rubygems.org'
 
-gem 'grape', '~> 0.12.0'
-gem 'padrino', '~> 0.12.4'
+ruby '2.2.4'
+
+gem 'grape'
+gem 'padrino'
 gem 'erubis'
 
 group :development, :test do
   gem 'rake'
-  gem 'rubocop', '0.33.0'
+  gem 'rubocop'
 end
 
 group :test do
-  gem 'rspec', '~> 3.1'
+  gem 'rspec'
   gem 'rack-test'
 end

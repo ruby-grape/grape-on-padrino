@@ -1,15 +1,21 @@
 module Grape
-  class Route
-    def name
-      "API#{route_version}"
-    end
+  class Router
+    class Route
+      def name
+        "API#{version}"
+      end
 
-    def request_methods
-      Set.new [route_method]
-    end
+      def request_methods
+        Set.new [request_method]
+      end
 
-    def original_path
-      route_path
+      def original_path
+        path
+      end
+
+      def controller
+        nil
+      end
     end
   end
 end

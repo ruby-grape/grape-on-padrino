@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.3.1'
 
+gem 'erubis'
 gem 'grape'
 gem 'padrino'
-gem 'erubis'
 
 group :development, :test do
   gem 'rake'
@@ -12,6 +12,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'rspec'
   gem 'rack-test'
+  gem 'rspec'
 end

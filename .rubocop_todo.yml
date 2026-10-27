@@ -8,11 +8,11 @@
 
 # Offense count: 1
 # Configuration parameters: AllowURI, URISchemes.
-Metrics/LineLength:
+Layout/LineLength:
   Max: 90
 
 # Offense count: 1
-Style/AccessorMethodName:
+Naming/AccessorMethodName:
   Exclude:
     - 'app/app.rb'
 

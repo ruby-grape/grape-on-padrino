@@ -1,25 +1,29 @@
-Grape API on Padrino
-====================
+# Grape on Padrino
 
-[![Build Status](https://travis-ci.org/ruby-grape/grape-on-padrino.svg?branch=master)](https://travis-ci.org/ruby-grape/grape-on-padrino)
-[![Dependency Status](https://gemnasium.com/ruby-grape/grape-on-padrino.svg)](https://gemnasium.com/ruby-grape/grape-on-padrino)
-[![Code Climate](https://codeclimate.com/github/ruby-grape/grape-on-padrino.svg)](https://codeclimate.com/github/ruby-grape/grape-on-padrino)
+[![Tests](https://github.com/ruby-grape/grape-on-padrino/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/ruby-grape/grape-on-padrino/actions/workflows/test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/ruby-grape/grape-on-padrino/badge.svg?branch=master)](https://coveralls.io/github/ruby-grape/grape-on-padrino?branch=master)
 
-A [Grape](http://github.com/ruby-grape/grape) API mounted on the [Padrino Web Framework](http://www.padrinorb.com).
+A [Grape](https://github.com/ruby-grape/grape) API mounted on the [Padrino Web Framework](https://padrinorb.com).
 
 * [ping](api/ping.rb): a hello world example that returns a JSON document
 
-Heroku
-------
+Tests
+-----
 
-In instance of grape-on-padrino is deployed on Heroku at [grape-on-padrino.herokuapp.com](http://grape-on-padrino.herokuapp.com/ping).
+GitHub Actions tests Padrino 0.15 and 0.16 on Ruby 3.3 and the latest Padrino 0.17 on Ruby 3.4 and 4.0. Padrino 0.15 uses Sinatra 2 and Grape 2.4. Newer Padrino lines use Sinatra 4 and Grape 3.2: Sinatra requires Mustermann 3, while Grape 3.3 and 4 require Mustermann 4, so those newer Grape versions cannot currently share a bundle with Padrino.
+
+Run `bundle exec rake spec`. To select the legacy stack, use `PADRINO_VERSION='~> 0.15.0' SINATRA_VERSION='~> 2.2' GRAPE_VERSION='~> 2.4' bundle update` and set the same variables when running tests. Matrix jobs resolve dependencies independently of the application lockfile. RuboCop runs separately.
+
+SimpleCov starts before the application loads and tracks application, API, and configuration files. CI uploads `coverage/lcov.info` from each matrix job to Coveralls and finishes the parallel coverage build after all jobs pass.
 
 Run
 ---
 
+Use Ruby 3.4 or 4.0 with the default Padrino 0.17 bundle. Puma is included as the Rack server.
+
 ```
 $ bundle install
-$ rackup
+$ bundle exec rackup
 ```
 
 ### Hello World
@@ -36,6 +40,5 @@ List Routes
 -----------
 
 ```
-rake routes
+bundle exec rake routes
 ```
-

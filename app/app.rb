@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Acme
   class App < Grape::API
     class << self
@@ -6,15 +8,15 @@ module Acme
       end
 
       def root
-        @_root ||= File.expand_path('..', __FILE__)
+        @root ||= File.expand_path(__dir__)
       end
 
       def dependencies
-        @_dependencies ||= Dir[File.expand_path('../../api/*.rb', __FILE__)]
+        @dependencies ||= Dir[File.expand_path('../api/*.rb', __dir__)]
       end
 
       def load_paths
-        @_load_paths ||= [File.expand_path('../../api', __FILE__)]
+        @load_paths ||= [File.expand_path('../api', __dir__)]
       end
 
       ## NOTE: Taken from Padrino. Deprecated in master (0.13.0.rc1).
@@ -31,10 +33,11 @@ module Acme
       end
 
       def setup_application!
-        @_configured ||= begin
+        @setup_application ||= begin
           set_load_paths(*load_paths)
           Padrino.require_dependencies(dependencies, force: true)
-          Grape::API.logger = Padrino.logger
+          # Padrino's Kernel#logger shadows Grape's logger DSL.
+          global_setting :logger, Padrino.logger
           true
         end
       end
